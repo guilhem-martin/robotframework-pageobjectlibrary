@@ -72,7 +72,8 @@ class PageObject(six.with_metaclass(ABCMeta, object)):
 
     @property
     def browser(self):
-        return self.selib._current_browser()
+        return self.selib.driver
+        # Change driver = selenium2lib._current_browser() to driver = selenium2lib.driver
 
     def __str__(self):
         return self.__class__.__name__
